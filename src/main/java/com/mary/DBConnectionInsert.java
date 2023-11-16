@@ -40,7 +40,6 @@ public class DBConnectionInsert {
 			System.out.println("드라이버 로딩실패-라이브러리가 등록되었는지 확인해주세요");
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

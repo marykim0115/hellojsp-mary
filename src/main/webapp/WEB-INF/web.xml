@@ -42,6 +42,20 @@
 	<res-auth>Container</res-auth>
 </resource-ref>
   
+  <!-- 한글 깨짐 방지를 위한 필터 설정 시작 -->
+ <filter>
+	<filter-name>SetCharacterEncoding</filter-name>
+ 	<filter-class>org.apache.catalina.filters.SessionInitializerFilter</filter-class>
+ 		<init-param>
+ 			<param-name>encoding</param-name>
+ 			<param-value>utf-8</param-value>
+ 		</init-param>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>SetCharacterEncoding</filter-name>
+ 	<url-pattern>/*</url-pattern>
+ </filter-mapping>
+  
   <!--에러 페이지 지정-->
   <error-page>
   	<error-code>404</error-code>
